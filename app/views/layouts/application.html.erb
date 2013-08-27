@@ -9,26 +9,26 @@
 </head>
 <body>
 
-<div id="everything">
-
   <div class="header">
-    <div class="row">
-      <div id="big-title" class="col-md-6">
-        <h1>alice mottola // web developer</h1>
-      </div>
+    <div class="my-row">
+      <div class="row">
+        <div id="big-title" class="col-md-6">
+          <h1>alice mottola <span id="header-comment">// web developer</span></h1>
+        </div>
 
-      <div class="my-nav col-md-6">
-        <div class="porthole">Codex</div>
-        <div class="porthole">Inventory</div>
-        <div class="porthole">Skills</div>
-        <div class="porthole">Messages</div>
-        <div class="porthole">Journal</div>
+        <div class="my-nav col-md-6">
+          <div class="porthole" id="codex-porthole"><p class="nav-letter">c</p></div>
+          <div class="porthole" id="inventory-porthole"><p class="nav-letter">i</p></div>
+          <div class="porthole" id="skills-porthole"><p class="nav-letter">s</p></div>
+          <div class="porthole" id="message-porthole"><p class="nav-letter">m</p></div>
+          <div class="porthole" id="journal-porthole"><a href="http://www.alicethetic.net"><p class="nav-letter">j</p></a></div>
+        </div>
       </div>
     </div>
+
   </div>
 
 <%= yield %>
 
-</div>
 </body>
 </html>
