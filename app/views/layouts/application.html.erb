@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Geo:400,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="everything">
+
+  <div class="header">
+    <div class="row">
+      <div id="big-title" class="col-md-6">
+        <h1>alice mottola // web developer</h1>
+      </div>
+
+      <div class="my-nav col-md-6">
+        <div class="porthole">Codex</div>
+        <div class="porthole">Inventory</div>
+        <div class="porthole">Skills</div>
+        <div class="porthole">Messages</div>
+        <div class="porthole">Journal</div>
+      </div>
+    </div>
+  </div>
+
+<%= yield %>
+
+</div>
+</body>
+</html>
