@@ -15,3 +15,26 @@
 //= require bootstrap
 //= require_tree .
 
+$(function() {
+  $('#codex-porthole').click(goToCodex);
+  $('#inventory-porthole').click(goToInventory);
+  $('#skills-porthole').click(goToSkills);
+  $('#message-porthole').click(goToMessage);
+});
+
+var goToCodex = function() {
+  $('#info-line').css('margin-left', '0px');
+};
+
+var goToInventory = function() {
+  console.log('reached');
+  $('#info-line').css('margin-left', '-1080px');
+};
+
+var goToSkills = function() {
+  $('#info-line').css('margin-left', '-2160px');
+};
+
+var goToMessage = function() {
+  $('#info-line').css('margin-left', '-3240px');
+};
