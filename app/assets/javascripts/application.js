@@ -16,25 +16,72 @@
 //= require_tree .
 
 $(function() {
+  $('.word-div').hide();
+  $('.porthole').hover(toggleIcon);
+
   $('#codex-porthole').click(goToCodex);
   $('#inventory-porthole').click(goToInventory);
   $('#skills-porthole').click(goToSkills);
-  $('#message-porthole').click(goToMessage);
+  $('#messages-porthole').click(goToMessages);
 });
 
+var toggleIcon = function() {
+  $(this).find('.word-div').toggle();
+  $(this).find('.icon-div').toggle();
+};
+
+var codexWord = function() {
+  $('#codex-porthole').html('<p class="nav-letter one-line">codex</p>');
+};
+
+var codexIcon = function() {
+  $('#codex-porthole').html('<img id="codex-icon" class="icon" src="codex.png" />');
+};
+
+var inventoryWord = function() {
+  $('#inventory-porthole').html('<p class="nav-letter three-lines">in<br>vent<br>ory</p>');
+};
+
+var inventoryIcon = function() {
+  $('#inventory-porthole').html('<img id="inventory-icon" class="icon" src="inventory.png" />');
+};
+
+var skillsWord = function() {
+  $('#skills-porthole').html('<p class="nav-letter one-line">skills</p>');
+};
+
+var skillsIcon = function() {
+  $('#skills-porthole').html('<img id="skills-icon" class="icon" src="skills.png" />');
+};
+
+var messagesWord = function() {
+  $('#messages-porthole').html('<p class="nav-letter three-lines">mes<br>sag<br>es</p>');
+};
+
+var messagesIcon = function() {
+  $('#messages-porthole').html('<img id="messages-icon" class="icon" src="messages.png" />');
+};
+
+var journalWord = function() {
+  $('#journal-porthole').html('<p class="nav-letter one-line">journal</p>');
+};
+
+var journalIcon = function() {
+  $('#journal-porthole').html('<img id="journal-icon" class="icon" src="journal.png" />');
+};
+
 var goToCodex = function() {
-  $('#info-line').css('margin-left', '0px');
+  $('#info-line').animate({ marginLeft: '0px' }, 750);
 };
 
 var goToInventory = function() {
-  console.log('reached');
-  $('#info-line').css('margin-left', '-1080px');
+  $('#info-line').animate({ marginLeft: '-1280px' }, 750);
 };
 
 var goToSkills = function() {
-  $('#info-line').css('margin-left', '-2160px');
+  $('#info-line').animate({ marginLeft: '-2560px' }, 750);
 };
 
-var goToMessage = function() {
-  $('#info-line').css('margin-left', '-3240px');
+var goToMessages = function() {
+  $('#info-line').animate({ marginLeft: '-3840px' }, 750);
 };

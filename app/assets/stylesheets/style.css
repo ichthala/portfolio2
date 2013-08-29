@@ -20,10 +20,22 @@ body {
 p {
   color: #888;
   font-family: Futura, sans serif;
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+
+a {
+  color: #95809c;
+}
+
+a:visited {
+  color: #95809c;
 }
 
 a:hover {
+  color: #fff;
   text-decoration: none;
+  background-color: transparent;
 }
 
 h1 {
@@ -39,9 +51,14 @@ h2 {
   color: #e5d8ed;
 }
 
+h3 {
+  font-family: Geo, sans serif;
+  font-size: 30px;
+  color: #95809c;
+  margin-top: 8px;
+}
+
 #big-title {
-  /*text-align: center;*/
-  /*width: 45%;*/
   margin-top: 86px;
 }
 
@@ -69,6 +86,8 @@ h2 {
   text-align: center;
   font-family: Futura, sans serif;
   color: #000;
+  position: relative;
+  float: right;
 }
 
 .porthole:hover {
@@ -76,12 +95,19 @@ h2 {
 }
 
 .nav-letter {
-  font-size: 55px;
-  margin-top: 26px;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
   font-family: Geo, sans serif;
+  line-height: 20px;
 }
 
-.nav-word {
+.nav-letter.one-line {
+  margin-top: 27px;
+}
+
+.nav-letter.three-lines {
+  margin-top: 6px;
 }
 
 .header {
@@ -129,6 +155,7 @@ h2 {
 
 .info {
   margin-top: 50px;
+  margin-right: 200px;
   border: 4px solid black;
   float: left;
   display: inline;
@@ -138,6 +165,7 @@ h2 {
   overflow: hidden;
   width: 1080px;
   margin: auto;
+  margin-bottom: 40px;
 }
 
 #info-line {
@@ -146,13 +174,53 @@ h2 {
 }
 
 .project {
-  width: 50%;
+  width: 45%;
   padding: 15px;
+  float: left;
 }
 
 .project-img {
-  width: 100%;
+  width: 95%;
+  margin-bottom: 15px;
 }
 
+.skill-col {
+  width: 33.333333%;
+  float: left;
+}
 
+li {
+  color: #888;
+  font-family: Futura, sans serif;
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
 
+.icon {
+  /*position: absolute;*/
+}
+
+#codex-icon {
+  width: 85%;
+  padding-top: 20px;
+}
+
+#inventory-icon {
+  width: 65%;
+  padding-top: 6px;
+}
+
+#skills-icon {
+  width: 67%;
+  padding-top: 9px;
+}
+
+#messages-icon {
+  width: 70%;
+  padding-top: 6px;
+}
+
+#journal-icon {
+  width: 75%;
+  padding-top: 15px;
+}
