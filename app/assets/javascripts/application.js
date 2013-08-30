@@ -18,6 +18,7 @@
 $(function() {
   $('.word-div').hide();
   $('.porthole').hover(toggleIcon);
+  $('#info-window').height($('#codex-info').height() + 70);
 
   $('#codex-porthole').click(goToCodex);
   $('#inventory-porthole').click(goToInventory);
@@ -32,16 +33,20 @@ var toggleIcon = function() {
 
 var goToCodex = function() {
   $('#info-line').animate({ marginLeft: '0px' }, 750);
+  $('#info-window').height($('#codex-info').height() + 70);
 };
 
 var goToInventory = function() {
   $('#info-line').animate({ marginLeft: '-1280px' }, 750);
+  $('#info-window').height($('#inventory-info').height() + 70);
 };
 
 var goToSkills = function() {
   $('#info-line').animate({ marginLeft: '-2560px' }, 750);
+  $('#info-window').height($('#skills-info').height() + 70);
 };
 
 var goToMessages = function() {
   $('#info-line').animate({ marginLeft: '-3840px' }, 750);
+  $('#info-window').height($('#messages-info').height() + 70);
 };
