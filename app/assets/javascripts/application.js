@@ -32,7 +32,7 @@ var toggleIcon = function() {
 };
 
 var makeInfoWindowTallAsBrowser = function() {
-  $('#info-window').height(window.outerHeight - $('#header').height());
+  // $('#info-window').height(window.outerHeight - $('#header').height());
   // console.log("height is" + $('#info-window').height());
 };
 
@@ -40,38 +40,68 @@ var changeViewerHeight = function(element) {
   $('#info-window').height($(element).height() + 70);
 };
 
+function changeHeight() {
+  $('#info-window').height($(infoPage).height() + 70);
+  console.log($(infoPage));
+  console.log($(infoPage).height());
+}
+
 var goToCodex = function() {
   makeInfoWindowTallAsBrowser();
+
+  // define the changeHeight method so it has access
+  // to this function's variables
+  var infoPage = $('#codex-info');
+  function changeHeightForMe() {
+    changeHeight();
+  }
+
   $('#info-line').animate({ marginLeft: '0px' },
-    { duration: 750, complete: changeViewerHeight( $('#codex-info') ) });
+    { duration: 750, complete: changeHeightForMe });
 };
 
 var goToInventory = function() {
   makeInfoWindowTallAsBrowser();
+
+  // define the changeHeight method so it has access
+  // to this function's variables
+  var infoPage = $('#inventory-info');
+  function changeHeightForMe() {
+    changeHeight();
+  }
+
   $('#info-line').animate({ marginLeft: '-1280px' },
-    { duration: 750, complete: changeViewerHeight( $('#inventory-info') ) });
+    { duration: 750, complete: changeHeightForMe });
 };
 
 var goToSkills = function() {
   makeInfoWindowTallAsBrowser();
+
+  // define the changeHeight method so it has access
+  // to this function's variables
+  var infoPage = $('#skills-info');
+  function changeHeightForMe() {
+    changeHeight();
+  }
+
   $('#info-line').animate({ marginLeft: '-2560px' },
-    { duration: 750, complete: changeViewerHeight( $('#skills-info') ) });
+    { duration: 750, complete: changeHeightForMe });
 };
 
 function goToMessages() {
   makeInfoWindowTallAsBrowser();
-  var infoPage = $('#messages-info');
 
-  function changeHeight() {
-    $('#info-window').height($(infoPage).height() + 70);
-    console.log($(infoPage));
-    console.log($(infoPage).height());
+  // define the changeHeight method so it has access
+  // to this function's variables
+  var infoPage = $('#messages-info');
+  function changeHeightForMe() {
+    changeHeight();
   }
 
   $('#info-line').animate({ marginLeft: '-3840px' },
-    { duration: 750, complete: changeHeight } );
+    { duration: 750, complete: changeHeightForMe } );
 }
 
-var messagesHeight = function() {
-  $('#info-window').height($('#messages-info').height() + 70);
-};
+// var messagesHeight = function() {
+//   $('#info-window').height($('#messages-info').height() + 70);
+// };
