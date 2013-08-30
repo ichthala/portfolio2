@@ -31,22 +31,47 @@ var toggleIcon = function() {
   $(this).find('.icon-div').toggle();
 };
 
+var makeInfoWindowTallAsBrowser = function() {
+  $('#info-window').height(window.outerHeight - $('#header').height());
+  // console.log("height is" + $('#info-window').height());
+};
+
+var changeViewerHeight = function(element) {
+  $('#info-window').height($(element).height() + 70);
+};
+
 var goToCodex = function() {
-  $('#info-line').animate({ marginLeft: '0px' }, 750);
-  $('#info-window').height($('#codex-info').height() + 70);
+  makeInfoWindowTallAsBrowser();
+  $('#info-line').animate({ marginLeft: '0px' },
+    { duration: 750, complete: changeViewerHeight( $('#codex-info') ) });
 };
 
 var goToInventory = function() {
-  $('#info-line').animate({ marginLeft: '-1280px' }, 750);
-  $('#info-window').height($('#inventory-info').height() + 70);
+  makeInfoWindowTallAsBrowser();
+  $('#info-line').animate({ marginLeft: '-1280px' },
+    { duration: 750, complete: changeViewerHeight( $('#inventory-info') ) });
 };
 
 var goToSkills = function() {
-  $('#info-line').animate({ marginLeft: '-2560px' }, 750);
-  $('#info-window').height($('#skills-info').height() + 70);
+  makeInfoWindowTallAsBrowser();
+  $('#info-line').animate({ marginLeft: '-2560px' },
+    { duration: 750, complete: changeViewerHeight( $('#skills-info') ) });
 };
 
-var goToMessages = function() {
-  $('#info-line').animate({ marginLeft: '-3840px' }, 750);
+function goToMessages() {
+  makeInfoWindowTallAsBrowser();
+  var infoPage = $('#messages-info');
+
+  function changeHeight() {
+    $('#info-window').height($(infoPage).height() + 70);
+    console.log($(infoPage));
+    console.log($(infoPage).height());
+  }
+
+  $('#info-line').animate({ marginLeft: '-3840px' },
+    { duration: 750, complete: changeHeight } );
+}
+
+var messagesHeight = function() {
   $('#info-window').height($('#messages-info').height() + 70);
 };
