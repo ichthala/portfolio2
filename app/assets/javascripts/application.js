@@ -18,7 +18,7 @@
 $(function() {
   $('.word-div').hide();
   $('.porthole').hover(toggleIcon);
-  $('#info-window').height($('#codex-info').height() + 70);
+  // $('#info-window').height($('#codex-info').height() + 70);
 
   $('#codex-porthole').click(goToCodex);
   $('#inventory-porthole').click(goToInventory);
@@ -41,9 +41,9 @@ var changeViewerHeight = function(element) {
 };
 
 function changeHeight() {
-  $('#info-window').height($(infoPage).height() + 70);
-  console.log($(infoPage));
-  console.log($(infoPage).height());
+  // $('#info-window').height($(infoPage).height() + 70);
+  // console.log($(infoPage));
+  // console.log($(infoPage).height());
 }
 
 var goToCodex = function() {
@@ -57,7 +57,7 @@ var goToCodex = function() {
   }
 
   $('#info-line').animate({ marginLeft: '0px' },
-    { duration: 750, complete: changeHeightForMe });
+    { duration: 750 });
 };
 
 var goToInventory = function() {
@@ -71,7 +71,7 @@ var goToInventory = function() {
   }
 
   $('#info-line').animate({ marginLeft: '-1280px' },
-    { duration: 750, complete: changeHeightForMe });
+    { duration: 750 });
 };
 
 var goToSkills = function() {
@@ -85,7 +85,7 @@ var goToSkills = function() {
   }
 
   $('#info-line').animate({ marginLeft: '-2560px' },
-    { duration: 750, complete: changeHeightForMe });
+    { duration: 750 });
 };
 
 function goToMessages() {
@@ -99,7 +99,7 @@ function goToMessages() {
   }
 
   $('#info-line').animate({ marginLeft: '-3840px' },
-    { duration: 750, complete: changeHeightForMe } );
+    { duration: 750 } );
 }
 
 // var messagesHeight = function() {
